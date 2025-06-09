@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruaraka Methodist Church</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+  /* ========== Merchandise Grid ========== */
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .merch-item {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .merch-item img { max-width: 100%; height: auto; border-radius: 4px; }
+    .merch-item button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #005baa;
+      color: #fff;
+    }
+
+    /* ========== Clergy Profiles ========== */
+    .clergy-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .clergy-card {
+      flex: 1 1 calc(50% - 1rem);
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .clergy-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ========== Ministries with Pictures ========== */
+    .ministries .ministry {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .ministries .ministry img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+    }
+
+    /* ========== Service Hours ========== */
+    .service-hours {
+      background: #eef6ff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    /* Basic layout tweaks */
+    .content-section { padding: 1rem; }
+    nav a { margin-right: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo.png" alt="Ruaraka Methodist Church Logo" />
+    <h1>Ruaraka Methodist Church</h1>
+    <p>A Place Where Everyone is Loved and Appreciated</p>
+  </header>
+
+  <nav>
+    <!-- Navigation links -->
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('services')">Services</a>
+    <a href="#" onclick="showSection('clergy')">Clergy</a>
+    <a href="#" onclick="showSection('ministries')">Ministries</a>
+    <a href="#" onclick="showSection('forms')">Forms</a>
+    <a href="#" onclick="showSection('events')">Events</a>
+    <a href="#" onclick="showSection('gallery')">Gallery</a>
+    <a href="#" onclick="showSection('give')">Give</a>
+    <a href="#" onclick="showSection('merchandise')">Merchandise</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="content-section">
+      <h2>Welcome to Ruaraka Methodist Church</h2>
+      <p>KENYA<p> </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section" style="display:none;">
+      <h2>About Us</h2>
+      <p>We are a vibrant church community rooted in love and faith.</p>
+    </section>
+
+    <!-- Services Section with Hours -->
+    <section id="services" class="content-section" style="display:none;">
+      <h2>Our Services</h2>
+      <!-- Service Hours Box(to be edited ) -->
+      <div class="service-hours">
+        <h3>Service Hours</h3>
+        <p>Sunday Worship: 8:00 AM & 10:30 AM</p>
+        <p>Midweek Fellowship: Wednesday 6:00 PM</p>
+        <p>Prayer Meeting: Friday 5:30 PM</p>
+      </div>
+      <p>We conduct Sunday services, mid-week fellowships, and special prayer sessions.</p>
+    </section>
+
+    <!-- Clergy Section Expanded -->
+    <section id="clergy" class="content-section" style="display:none;">
+      <h2>Meet Our Clergy</h2>
+      <div class="clergy-grid">
+        <!-- Rev Matumbi -->
+        <div class="clergy-card">
+          <img src="Adobe_Express_-_file.png" alt="Rev Matumbi" />
+          <h3>Rev Matumbi</h3>
+          <p>Superintendent Minister</p>
+        </div>
+        <!-- Rev Kitonde -->
+        <div class="clergy-card">
+          <img src="./Kitonde.PNG" alt="Rev Kitonde" />
+          <h3>Rev Kitonde</h3>
+          <p>Mission & Evangelism</p>
+        </div>
+        <!-- Rev Karen -->
+        <div class="clergy-card">
+          <img src="./Rev_Karen.PNG" alt="Rev Karen" />
+          <h3>Rev Karen</h3>
+          <p>JCTM Ministry</p>
+        </div>
+        <!-- Rev Ken -->
+        <div class="clergy-card">
+          <img src="./Rev_Ken.PNG" alt="Rev Ken" />
+          <h3>Rev Ken</h3>
+          <p>Youth Ministry</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministries Section with Pictures -->
+    <section id="ministries" class="content-section" style="display:none;">
+      <h2>Our Ministries</h2>
+      <div class="ministries">
+        <div class="ministry"><img src="jctm.jpg" alt="JCTM"> JCTM - Evangelism & Discipleship</div>
+        <div class="ministry"><img src="mens.jpg" alt="Men's Fellowship"> Men's Fellowship</div>
+        <div class="ministry"><img src="womens.jpg" alt="Women's Fellowship"> Women's Fellowship</div>
+        <div class="ministry"><img src="youth.jpg" alt="Youth Ministry"> Youth Ministry</div>
+        <div class="ministry"><img src="choir.jpg" alt="Choir Ministry"> Choir Ministry</div>
+        <div class="ministry"><img src="worship.jpg" alt="Worship Ministry"> Worship Ministry</div>
+      </div>
+    </section>
+
+    <!-- Forms Section with Google Sheets Integration -->
+    <section id="forms" class="content-section" style="display:none;">
+      <h2>Forms</h2>
+      <!-- Buttons to display different forms -->
+      <div>
+        <button onclick="showForm('appointment')">Appointment</button>
+        <button onclick="showForm('volunteer')">Volunteer</button>
+        <button onclick="showForm('join')">Join a Ministry</button>
+      </div>
+      <!-- Appointment Form linked to Google Sheets -->
+      <div id="appointment" class="form-tab" style="display:none;">
+        <h3>Appointment Form</h3>
+        <!-- TODO: Replace action URL with  Google Apps Script endpoint -->
+        <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
+          <!-- Google Sheets will capture these fields -->
+          <input name="Name" type="text" placeholder="Name" required><br>
+          <input name="Email" type="email" placeholder="Email" required><br>
+          <textarea name="Message" placeholder="Message"></textarea><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- Volunteer Form -->
+      <div id="volunteer" class="form-tab" style="display:none;">
+        <h3>Volunteer Form</h3>
+        <!-- TODO: Integrate similar Google Sheets endpoint -->
+        <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
+          <input name="FullName" type="text" placeholder="Full Name" required><br>
+          <input name="Interest" type="text" placeholder="Area of Interest"><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- Join Ministry Form -->
+      <div id="join" class="form-tab" style="display:none;">
+        <h3>Join a Ministry</h3>
+        <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
+          <input name="Name" type="text" placeholder="Name" required><br>
+          <select name="Ministry">
+            <option value="">Choose Ministry</option>
+            <option value="JCTM">JCTM</option>
+            <option value="Mens">Men's Fellowship</option>
+            <option value="Womens">Women's Fellowship</option>
+            <option value="Youth">Youth Ministry</option>
+            <option value="Choir">Choir</option>
+          </select><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="content-section" style="display:none;">
+      <h2>Upcoming Events</h2>
+      <p>Stay updated with our church calendar.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="content-section" style="display:none;">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="Adobe_Express_-_file.png" alt="Event 1" />
+        <img src="./WhatsApp_Image_2025-03-29_at_09.42.53.jpeg" alt="Event 2" />
+        <img src=""> <!-- Add more as needed -->
+      </div>
+    </section>
+
+    <!-- Giving Section(to be connected to the api) -->
+    <section id="give" class="content-section" style="display:none;">
+      <h2>Giving</h2>
+      <p>Support our ministry through your tithes and offerings.</p>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merchandise" class="content-section" style="display:none;">
+      <h2>Buy Merchandise to Support the Church</h2>
+      <div class="merch-grid">
+        <div class="merch-item">
+          <img src="cups.jpg" alt="Church Cup" />
+          <h3>Cups</h3>
+          <p>Price: KES 300</p>
+          <button>Order Now</button>
+        </div>
+        <div class="merch-item">
+          <img src="tshirt.jpg" alt="Church T-Shirt" />
+          <h3>T-Shirt</h3>
+          <p>Price: KES 1,000</p>
+          <button>Order Now</button>
+        </div>
+        <div class="merch-item">
+          <img src="hoodie.jpg" alt="Church Hoodie" />
+          <h3>Hoodie</h3>
+          <p>Price: KES 2,000</p>
+          <button>Order Now</button>
+        </div>
+        <div class="merch-item">
+          <img src="cap.jpg" alt="Church Cap" />
+          <h3>Cap</h3>
+          <p>Price: KES 500</p>
+          <button>Order Now</button>
+        </div>
+        <div class="merch-item">
+          <img src="leso.jpg" alt="Church Leso" />
+          <h3>Leso</h3>
+          <p>Price: KES 700</p>
+          <button>Order Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section" style="display:none;">
+      <h2>Contact Us</h2>
+      <p>Email: info@ruarakachurch.org | Phone: +254724680491</p>
+    </section>
+  </main>
+
+  <footer style="text-align:center; margin-top:40px;">
+    <p>&copy; 2025 Ruaraka Methodist Church. All rights reserved.</p>
+    <p>Powered by <strong>RUARAKA ICT</strong></p>
+  </footer>
+
+  <!-- ======= JavaScript ======= -->
+  <script>
+    // Toggle between main sections
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    // Toggle between forms inside Forms section
+    function showForm(formId) {
+      document.querySelectorAll('.form-tab').forEach(tab => tab.style.display = 'none');
+      document.getElementById(formId).style.display = 'block';
+    }
+
+    // Initialize default view
+    document.addEventListener('DOMContentLoaded', () => showSection('home'));
+  </script>
+</body>
+</html>
+
